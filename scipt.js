@@ -59,3 +59,13 @@ navigator.clipboard.writeText(hasil.value);
 alert("Berhasil Dicopy");
 
 };
+
+document.addEventListener("paste", (e) => {
+
+    console.log(e.clipboardData.items);
+
+    for (const item of e.clipboardData.items) {
+        console.log(item.type);
+    }
+
+});
